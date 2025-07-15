@@ -1,0 +1,17 @@
+@startuml
+
+Paciente -> Recepcionista: Dá entrada no pronto-socorro
+
+Recepcionista -> Recepcionista: Coleta os dados do paciente
+
+Recepcionista -> Triagem: Adiciona o paciente na fila da triagem
+
+Enfermeiro --> Triagem: Chama o próximo na fila de triagem
+
+Enfermeiro -> Enfermeiro: Realiza a triagem e determina uma prioridade
+
+Enfermeiro -> Atendimento: Adiciona o paciente com a prioridade definida à fila de atendimento
+
+Médico -> Atendimento: Realiza os atendimentos na ordem de prioridade
+
+@enduml
